@@ -1,0 +1,8 @@
+{
+  "name": "mini-reservation-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "69b7f43d"
+}
