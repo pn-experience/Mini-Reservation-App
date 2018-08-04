@@ -1,0 +1,33 @@
+.toolbar-background{
+	background-color:transparent;
+}
+.header-md{
+	&:after{
+		display:none;
+	}
+}
+.toolbar{
+	height:72px;
+	padding:0 40px;
+	box-shadow:none;
+
+	.bar-button-menutoggle-md{
+		order:4;
+	}
+	img{
+		order:1;
+		width:215px;
+	}
+	.avatar{
+		background-color:$orange;
+		height:40px;
+		width:40px;
+		border-radius:50%;
+		display:flex;
+		justify-content: center;
+		align-items:center;
+		font-family:$montserrat;
+		font-weight:bold;
+		color:$darkGray;
+	}
+}

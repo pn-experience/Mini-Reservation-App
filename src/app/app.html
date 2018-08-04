@@ -1,18 +1,17 @@
-<ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-menu [content]="content" type="overlay" side="right">
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
-  </ion-content>
-
+	<ion-content>
+		<div class="avatar">SM</div>
+		<span class="username">Shane Morris</span>
+		<ul class="links">
+			<li><button class="btn secondary">Policies</button></li>
+			<li><button class="btn secondary">Help + Info</button></li>
+			<li><button class="btn">Log Out</button></li>
+		</ul>
+		<span class="copyright">
+			&copy; 2018 Partners + Napier
+		</span>
+	</ion-content>
 </ion-menu>
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->

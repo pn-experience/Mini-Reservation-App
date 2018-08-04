@@ -1,18 +1,18 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<img src="./assets/imgs/pn-logo-wide.png" alt="Partners + Napier logo" />
+		<button ion-button menuToggle>
+			<div class="avatar">SM</div>
+		</button>
+	</ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+	<div class="login">
+		<img src="./assets/imgs/pn-logo.png" alt="Partners + Napier logo" />
+		<h1>Reservations</h1>
+		<!-- I added a module for searchable input fields in app.module.ts. Use that eventually.-->
+		<input type="text" placeholder="Enter Name..." />
+		<button class="btn">Log In</button>
+	</div>
 </ion-content>

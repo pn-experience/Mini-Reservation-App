@@ -9,6 +9,8 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { SelectSearchableModule } from 'ionic-select-searchable';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -18,6 +20,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    SelectSearchableModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
