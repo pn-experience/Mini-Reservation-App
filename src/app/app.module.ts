@@ -11,8 +11,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SelectSearchableModule } from 'ionic-select-searchable';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { LoginPage } from '../pages/login/login';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDatepickerModule, MatNativeDateModule} from '@angular/material';
+import { CalendarModule } from "ion2-calendar";
+
 
 @NgModule({
   declarations: [
@@ -25,9 +25,7 @@ import { MatDatepickerModule, MatNativeDateModule} from '@angular/material';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     SelectSearchableModule,
-    BrowserAnimationsModule,
-    MatDatepickerModule,
-    MatNativeDateModule
+    CalendarModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

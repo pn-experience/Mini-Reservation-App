@@ -14,10 +14,9 @@
 		<span class="subcopy">*Nah, not really. But you can still impress your clients with this sweet whip.</span>
 		<img class="mini-logo" src="./assets/imgs/logo-mini.png" alt="MINI logo" />
 		<div class="action-buttons">
-			<button class="btn secondary" (click)="picker.open()">Modify</button>
-			<button class="btn" (click)="picker.open()">Reserve</button>
+			<button class="btn secondary" (click)="openCalendar()">Modify</button>
+			<button class="btn" (click)="openCalendar()">Reserve</button>
 		</div>
-		
 		<div class="perks">
 			<ul>
 				<li>
@@ -38,8 +37,5 @@
 			</ul>
 		</div>
 	</main>
-
-	<input class="hidden" matInput [matDatepicker]="picker">
-	<mat-datepicker touchUi="true" #picker></mat-datepicker>
 
 </ion-content>
