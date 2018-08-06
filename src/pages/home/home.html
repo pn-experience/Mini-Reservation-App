@@ -7,12 +7,34 @@
 	</ion-navbar>
 </ion-header>
 
-<ion-content padding>
-	<div class="login">
-		<img src="./assets/imgs/pn-logo.png" alt="Partners + Napier logo" />
-		<h1>Reservations</h1>
-		<!-- I added a module for searchable input fields in app.module.ts. Use that eventually.-->
-		<input type="text" placeholder="Enter Name..." />
-		<button class="btn">Log In</button>
-	</div>
+<ion-content>
+	<main class="content-container">
+		<h1>Hey there, good lookin’.</h1>
+		<p>Congratulations! You’re our 1,000th visitor and you’ve won a FREE MINI*.</p>
+		<span class="subcopy">*Nah, not really. But you can still impress your clients with this sweet whip.</span>
+		<img class="mini-logo" src="./assets/imgs/logo-mini.png" alt="MINI logo" />
+		<div class="action-buttons">
+			<button class="btn secondary">Modify</button>
+			<button class="btn">Reserve</button>
+		</div>
+		<div class="perks">
+			<ul>
+				<li>
+					<img src="./assets/imgs/icons/lunch.svg" alt="" aria-hidden="true" />
+					<span class="label">Good For</span>
+					<span class="value">Client Lunches</span>
+				</li>
+				<li>
+					<img src="./assets/imgs/icons/location.svg" alt="" aria-hidden="true" />
+					<span class="label">Farthest Trip</span>
+					<span class="value">Albuquerque</span>
+				</li>
+				<li>
+					<img src="./assets/imgs/icons/capacity.svg" alt="" aria-hidden="true" />
+					<span class="label">Capacity</span>
+					<span class="value">4 Folks</span>
+				</li>
+			</ul>
+		</div>
+	</main>
 </ion-content>

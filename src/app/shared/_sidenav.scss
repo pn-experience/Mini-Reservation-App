@@ -1,4 +1,4 @@
-ion-menu[type=overlay]{
+.md ion-menu[type=overlay]{
 	.content-md{
 		background-color:$black;
 		position: relative;
@@ -14,6 +14,7 @@ ion-menu[type=overlay]{
 	}
 	.menu-inner{
 		width:480px;
+		box-shadow:-10px 0 40px rgba(0,0,0,0.2);
 	}
 	.scroll-content{
 		overflow:auto;
@@ -64,5 +65,16 @@ ion-menu[type=overlay]{
 		font-family: $noto;
 		font-size: 10px;
 		color: rgba(255,255,255,0.70);
+	}
+	.close{
+		position: absolute;
+		top:20px;
+		right:20px;
+		background-color:transparent;
+		width:35px;
+		height:35px;
+		img{
+			width:100%;
+		}
 	}
 }

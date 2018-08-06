@@ -12,8 +12,20 @@
 
 
 .ion-page .content{
-	background:url('./../assets/imgs/met-bg.jpg') no-repeat center center;
-	background-size:cover;
+	position: relative;
+	background-color:$darkGray;
+	&:after{
+		content:"";
+		height:100%;
+		width:100%;
+		position:absolute;
+		top:0;left:0;
+		background:url('./../assets/imgs/met-bg.jpg') no-repeat center center;
+		background-size:cover;
+		z-index:0;
+		pointer-events:none;
+		transition:all $cb .25s;
+	}
 	.scroll-content{
 		overflow:auto;
 		padding:0;
