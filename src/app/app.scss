@@ -1,15 +1,13 @@
 // http://ionicframework.com/docs/theming/
 
-
 // App Global Sass
-
 @import 'shared/variables';
 @import 'shared/typography';
 @import 'shared/button';
 @import 'shared/nav';
 @import 'shared/sidenav';
 @import 'shared/input';
-
+@import '../theme/material-theme';
 
 .ion-page .content{
 	position: relative;
@@ -30,4 +28,8 @@
 		overflow:auto;
 		padding:0;
 	}
+}
+
+.hidden{
+	display:none;
 }

@@ -11,9 +11,6 @@
 	padding:0 40px;
 	box-shadow:none;
 
-	.bar-button-menutoggle-md{
-		order:4;
-	}
 	img{
 		order:1;
 		width:215px;
@@ -29,5 +26,11 @@
 		font-family:$montserrat;
 		font-weight:bold;
 		color:$darkGray;
+	}
+	.toolbar-content-ios{
+		order: 1 !important;
+	}
+	.bar-button-menutoggle-ios, .bar-button-menutoggle-md{
+		order:4 !important;
 	}
 }
