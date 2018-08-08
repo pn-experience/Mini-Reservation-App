@@ -11,6 +11,10 @@ button.btn{
 	font-weight:bold;
 	text-transform:uppercase;
 	transition:all $cb .15s;
+	&:disabled{
+		opacity:.2;
+		cursor:not-allowed;
+	}
 	&:hover{
 		background-color:lighten($orange, 10%);
 	}
@@ -21,5 +25,11 @@ button.btn{
 			background-color:$orange;
 			color:$black;
 		}
+	}
+	&.no-outline{
+		border-color:transparent;
+		background-color:transparent;
+		color:$white;
+		padding:0;
 	}
 }

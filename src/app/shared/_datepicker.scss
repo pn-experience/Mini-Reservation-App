@@ -1,7 +1,161 @@
-.ion-page{
-	.content.calendar-page{
+.modal-wrapper{
+	// height:80vh;
+	width:640px;
+	left: calc(50% - (640px/2));
+    // top: calc(50% - (80vh/2));
+}
+page-datepicker{
+	.content{
 		&:after{
 			display:none;
 		}
 	}
+	.toolbar-content{
+		display:flex;
+		justify-content: space-between;
+		button{
+			img, svg{
+				width:15px;
+				vertical-align: middle;
+				margin-right:10px;
+			}
+			svg{
+				#close-icon{
+					fill:$white;
+				}
+			}
+		}
+	}
+	ion-calendar{
+		background-color:transparent;
+		padding:0;
+		.button-clear-md:hover:not(.disable-hover){
+			background-color:transparent;
+		}
+		.title{
+			background-color:rgba(255,255,255,.02);
+			padding:40px 45px;
+			.forward, .back{
+				color:$orange;
+				font-size:24px;
+				left:0;
+				right:0;
+			}
+			.switch-btn{
+				span{
+					font-family: $montserrat;
+					font-size: 18px;
+					color: $white;
+					letter-spacing: 0.32px;
+					text-transform: uppercase;
+					.icon{
+						font-size:16px;
+					}
+				}
+			}	
+		}
+		ion-calendar-week{
+			.week-title.transparent{
+				padding: 15px 5px;
+			}
+			.week-title{
+				li{
+					font-family: $noto;
+					font-size: 14px;
+					color: rgba(255,255,255,0.50);
+				}
+			}
+		}
+		ion-calendar-month{
+			.primary{
+				.between{
+					button.days-btn{
+						background: rgba(251,180,21,0.25);
+						width:100% !important;
+					}
+				}
+				.days{
+					margin-bottom:25px;
+					.today{
+						&.on-selected{
+							p{
+								color:$black;
+								font-weight:bold;
+							}
+						}
+						p{
+							color:$orange;
+						}
+					}
+					&.startSelection, &.endSelection{
+						&:after{
+							background: rgba(251,180,21,0.25);
+							height:50px;
+						}
+						button.days-btn{
+							background-color:$orange;
+							border-radius:0;
+							p{
+								font-weight:bold;
+								color:$black;
+							}
+						}
+					}
+				}
+
+				button.days-btn,
+				button.days-btn.last-month-day,
+				button.days-btn.is-last{
+					width:50px;
+					height:50px;
+					border-radius:0 !important;
+					&.on-selected{
+						background-color:$orange;
+						border-radius:0;
+						p{
+							font-weight:bold;
+							color:$black;
+						}
+					}
+					p{
+						font-family: Helvetica;
+						font-size: 18px;
+						color: $white;
+					}
+				}
+
+			}
+		}
+	}
+	ion-calendar-month-picker{
+		.month-picker.primary{
+			.month-packer-item{
+				margin-bottom:40px;
+				button{
+					color:$white;
+					font-family: $noto;
+					font-size: 14px;
+					color: $white;
+					text-transform: uppercase;
+				}
+				&.this-month{
+					button{
+						border-color:$orange;
+						border-radius:0;
+					}
+				}
+			}
+		}
+	}
+	ion-footer{
+		&:before{
+			display:none;
+		}
+		padding-bottom:20px;
+	}
+
+}
+ion-backdrop{
+	background-color:rgba(255,255,255,.5);
+	opacity:1;
 }
