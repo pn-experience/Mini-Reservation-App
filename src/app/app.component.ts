@@ -1,25 +1,32 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, MenuController, Events, NavController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
-
-
+import { GlobalVarsService } from '../providers/global-variables-service';
 
 @Component({
   templateUrl: 'app.html'
 })
+
 export class MyApp {
-  @ViewChild(Nav) nav: Nav;
+
 
   rootPage: any = LoginPage;
-
+  userInitials: string = '';
   pages: Array<{title: string, component: any}>;
+  @ViewChild('content') nav: NavController;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    public menuCtrl: MenuController,
+    public globalVars: GlobalVarsService,
+    public events: Events) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -44,4 +51,15 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
+
+  navigateToLogin(){
+    this.globalVars.logOutUser();
+    this.menuCtrl.close();
+    this.nav.push(LoginPage);
+  }
+
+  ionViewWillLoad() {
+
+  }
+
 }

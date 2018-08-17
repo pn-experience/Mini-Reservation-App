@@ -4,12 +4,12 @@
 		<button class="close" menuToggle>
 			<img src="./assets/imgs/icons/close--white.svg" alt="Close" />
 		</button>
-		<div class="avatar">SM</div>
+		<div class="avatar">{{ content.userInitials }}</div>
 		<span class="username">Shane Morris</span>
 		<ul class="links">
 			<li><button class="btn secondary">Policies</button></li>
 			<li><button class="btn secondary">Help + Info</button></li>
-			<li><button class="btn">Log Out</button></li>
+			<li><button class="btn" (click)="navigateToLogin()">Log Out</button></li>
 		</ul>
 		<span class="copyright">
 			&copy; 2018 Partners + Napier

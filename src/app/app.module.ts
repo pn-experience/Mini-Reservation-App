@@ -10,7 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { SelectSearchableModule } from 'ionic-select-searchable';
-import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { GlobalVarsService } from './../providers/global-variables-service';
 import { LoginPage } from '../pages/login/login';
 import { DatepickerPage } from '../pages/datepicker/datepicker';
 import { CalendarModule } from "ion2-calendar";
@@ -50,7 +50,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthServiceProvider
+    GlobalVarsService
   ]
 })
 export class AppModule {}

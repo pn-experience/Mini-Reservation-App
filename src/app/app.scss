@@ -8,9 +8,10 @@
 @import 'shared/sidenav';
 @import 'shared/input';
 @import 'shared/datepicker';
+@import 'shared/select-searchable';
 @import '../theme/material-theme';
 
-.ion-page .content{
+.ion-page:not(.select-searchable-page) .content{
 	position: relative;
 	background-color:$darkGray;
 	&:after{

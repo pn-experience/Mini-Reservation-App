@@ -15,6 +15,12 @@
 		order:1;
 		width:215px;
 	}
+	.back-button{
+		display:none;
+	}
+	.btn-avatar{
+		display:inline-block !important;
+	}
 	.avatar{
 		background-color:$orange;
 		height:40px;

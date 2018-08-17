@@ -1,0 +1,41 @@
+.select-searchable-page{
+	color:$white;
+	.content, .content-md{
+		background-color:$black;
+	}
+	.bar-button.bar-button-md{
+		color:$white;
+		font-size:24px;
+		padding:0;
+		*{
+			padding:0;
+		}
+	}
+	.searchbar-md .searchbar-search-icon{
+		top:14px;
+	}
+	.select-searchable-group{
+		padding:0 40px;
+	}
+	.searchbar-md .searchbar-input{
+		border-radius:0;
+		font-family:$noto;
+		padding:8px 55px 8px 69px;
+	}
+	.list{
+		margin-top:20px;
+	}
+	.item-md, .item{
+		background:lighten($black, 10%);
+		color:$white;
+		margin-bottom:10px;
+		border-radius:0;
+		font-family:$noto;
+		.item-inner{
+			border:none;
+		}
+		.icon-md-primary{
+			color:$orange;
+		}
+	}
+}

@@ -10,14 +10,14 @@ import { Observable } from 'rxjs/Observable';
 	template:
 		`<ion-content>
 				<ion-calendar [(ngModel)]="date"
-							  (onSelect)="onSelect($event)"
+							  (onSelectStart)="onSelect($event)"
 							  [options]="options"
 							  type="string"
 							  format="YYYY-MM-DD">
 				</ion-calendar>
-				<ul>
-					<li *ngFor="let item of reservedDates | async">{{item.test}}</li>
-				</ul>
+				<div style="color:white;font-size:18px;">
+					Dates selected: {{date?.from}}
+				</div>
 		</ion-content>
 		<ion-footer>
 			<ion-navbar>
@@ -28,6 +28,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class DatepickerPage {
 	selected: boolean = false;
+	dateRangeSelected: any;
 	reservedDates: Observable<any>;
 	date: {
 		from: string
@@ -41,24 +42,27 @@ export class DatepickerPage {
 	constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl : ViewController, db: AngularFirestore) {
 		this.reservedDates = db.collection('Test').valueChanges();
 	}
-	
 
 	public closeModal(){
 		this.viewCtrl.dismiss();
 	}
 	
 	onSelect($event) {
+		this.dateRangeSelected = $event;
 		if ($event.selected == true){
 			this.selected = true;
 		}
-		console.log(this.selected);
+			console.log($event);
 	}
+
 	reserve(){
 		this.closeModal();
 	}
+
 	ngOnInit(){
 
 	}
+
 	ngOnDestroy(){
 
 	}
