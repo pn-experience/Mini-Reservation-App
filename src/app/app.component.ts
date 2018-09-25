@@ -17,7 +17,9 @@ export class MyApp {
 
   rootPage: any = LoginPage;
   userInitials: string = '';
+  userName: string = '';
   pages: Array<{title: string, component: any}>;
+
   @ViewChild('content') nav: NavController;
 
   constructor(
@@ -35,6 +37,11 @@ export class MyApp {
       { title: 'List', component: ListPage }
     ];
 
+    events.subscribe('User Logged In:', (user, time) => {
+      this.userInitials = this.globalVars.getUserInitials();
+      this.userName = this.globalVars.getCurrentUser().name;
+    })
+    
   }
 
   initializeApp() {
@@ -56,10 +63,6 @@ export class MyApp {
     this.globalVars.logOutUser();
     this.menuCtrl.close();
     this.nav.push(LoginPage);
-  }
-
-  ionViewWillLoad() {
-
   }
 
 }

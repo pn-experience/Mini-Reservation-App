@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { SelectSearchableComponent } from 'ionic-select-searchable';
 import { GlobalVarsService } from './../../providers/global-variables-service';
@@ -22,7 +22,12 @@ export class LoginPage {
   user: User;
   nameSelected: boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private globalVars: GlobalVarsService) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private globalVars: GlobalVarsService,
+    public events: Events ) {
+
     this.users = [
       { id: 1, name: 'Shane Morris', email: 'shane.morris@partnersandnapier.com' },
       { id: 2, name: 'Marco Fesyuk', email: 'shane.morris@partnersandnapier.com' },
@@ -31,7 +36,8 @@ export class LoginPage {
     this.user = {id: 0, name: 'Enter Name...', email:''};
   }
 
-  logIn() {
+  async logIn() {
+    this.events.publish('User Logged In:', this.globalVars.getCurrentUser(), Date.now());
     this.navCtrl.push(HomePage);
   }
 
